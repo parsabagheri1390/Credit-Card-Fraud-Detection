@@ -29,33 +29,62 @@ These 28 features are anonymized numerical variables generated using Principal C
 The original transaction features have been transformed to protect sensitive financial information.
 Each variable represents a transformed component of the original transaction data.
 
-* Important: The exact meaning of V1–V28 is not publicly available because these features are anonymized transformations of the original transaction data.
-- 3. Amount
+- Important: The exact meaning of V1–V28 is not publicly available because these features are anonymized transformations of the original transaction data.
+- 3. Amount :
 Represents the monetary value of each credit card transaction.
 Contains the transaction amount.
 Can be useful for identifying unusual transaction patterns.
-4. Class (Target Variable)
+- 4. Class (Target Variable) :
 The Class column represents the target variable used for binary classification.
-Value
-Meaning
-0
-Legitimate Transaction
-1
-Fraudulent Transaction
-The model attempts to predict whether a transaction belongs to Class 0 or Class 1.
-⚠️ 4. Class Imbalance
-One of the main challenges of this dataset is class imbalance.
+0 : Legitimate Transaction
+1 : Fraudulent Transaction
+- The model attempts to predict whether a transaction belongs to Class 0 or Class 1.
+#  4. Class Imbalance :
+- One of the main challenges of this dataset is class imbalance.
 The distribution of transactions is:
-Class
-Transactions
-Percentage
-0 (Legitimate)
-284,315
-99.8273%
-1 (Fraudulent)
-492
-0.1727%
-This imbalance can cause Machine Learning models to favor the majority class.
+- Class :
+0 (Legitimate) : 284,315 , 99.8273%
+1 (Fraudulent) : 492 , 0.1727%
+- This imbalance can cause Machine Learning models to favor the majority class.
 For example, a model could achieve very high accuracy simply by predicting every transaction as legitimate.
 To address this issue, techniques such as the following can be investigated:
-SMOTE (Synthetic Minority Over-sampling Technique)
+- SMOTE (Synthetic Minority Over-sampling Technique)
+- Random Undersampling
+- Class Weight Adjustment
+- Threshold Optimization
+# 5. Machine Learning Algorithms
+--The following algorithms can be implemented and compared:
+Logistic Regression
+K-Nearest Neighbors (KNN)
+Decision Tree
+Random Forest
+Support Vector Machine (SVM)
+XGBoost
+📈 6. Evaluation Metrics
+Since the dataset is highly imbalanced, Accuracy alone is not sufficient.
+The following evaluation metrics will be used:
+Accuracy
+Precision
+Recall
+F1-Score
+ROC-AUC
+PR-AUC
+Confusion Matrix
+🛠️ 7. Technologies & Libraries
+Python
+NumPy
+Pandas
+Matplotlib
+Seaborn
+Scikit-learn
+Imbalanced-learn
+XGBoost
+🎯 8. Project Goals
+The main goals of this project are:
+Explore and analyze credit card transaction data.
+Understand class imbalance.
+Perform data preprocessing and feature analysis.
+Train multiple Machine Learning algorithms.
+Apply techniques to handle imbalanced datasets.
+Compare model performance.
+Identify the most suitable model for fraudulent transaction detection.
