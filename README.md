@@ -62,7 +62,7 @@ To address this issue, techniques such as the following can be investigated:
 - XGBoost
 ## 6. Evaluation Metrics
 ### Since the dataset is highly imbalanced, Accuracy alone is not sufficient.
-###The following evaluation metrics will be used:
+### The following evaluation metrics will be used:
 - Accuracy
 - Precision
 - Recall
@@ -86,3 +86,8 @@ To address this issue, techniques such as the following can be investigated:
 - Apply techniques to handle imbalanced datasets.
 - Compare model performance.
 - Identify the most suitable model for fraudulent transaction detection.
+
+
+## About the Developer:
+Parsa Bagheri, a 15-year-old Python developer and ML 
+enthusiast from Iran. Future web developer and ml engineer and deep learning engineer and llm Junior! 
